@@ -1,0 +1,14 @@
+<h1><%= @restaurant.name %></h1>
+
+
+
+<p>Le restaurant se trouve à <%= @restaurant.address %>.</p>
+<p>Son numéro de téléphone est le suivant : <%= @restaurant.phone_number %>.</p>
+<p>C'est un restaurant <%= @restaurant.category %>.</p>
+
+<p>Les avis :</p>
+<ul>
+  <% @reviews.each do |review| %>
+    <li><%= review.content %> - <%= review.rating %> étoiles</li>
+  <% end %>
+</ul>
